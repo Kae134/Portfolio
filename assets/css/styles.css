@@ -26,7 +26,8 @@ body {
         "main-top-left main-title main-title main-top-right"
         "main-middle-left main-middle-about main-middle-decoration main-middle-right"
         "main-middle-left main-middle-projects main-middle-projects main-middle-right"
-        "main-bottom-left main-bottom-decoration main-bottom-projects main-bottom-right"
+        "main-bottom-left main-bottom-decoration main-bottom-language main-bottom-right"
+        "main-bottom-left main-bottom-contact main-bottom-contact main-bottom-right"
         "main-footer-left main-footer main-footer main-footer-right";
 }
 
@@ -61,9 +62,11 @@ body {
 /* BOTTOM */
 .main-bottom-right { grid-area: main-bottom-right; }
 
-.main-bottom-projects { grid-area: main-bottom-projects; }
+.main-bottom-projects { grid-area: main-bottom-language; }
 
 .main-bottom-decoration { grid-area: main-bottom-decoration; }
+
+.main-bottom-contact { grid-area: main-bottom-contact; }
 
 .main-bottom-left { grid-area: main-bottom-left; }
 
@@ -277,7 +280,13 @@ body {
     text-decoration: none;
     background-image: url("../img/projet-test.jpg");
     background-size: 100%;
+    transition: all 0.1s ease;
 }
+
+.main-middle-projects .projects .project:hover{
+    transform: scale(1.05);
+}
+
 
 .main-middle-projects .projects .project span {
     color: white;
@@ -286,6 +295,66 @@ body {
 /* https://grid.layoutit.com <= incroyable */
 
 
+
+
+/* ================= 
+
+        Bottom
+
+   ================= */
+
+.main-bottom-contact {
+    display: flex;
+    justify-content: center ;
+}
+
+#form_contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+}
+
+#email_input {
+    border-style: solid;
+    border-width: 0.15rem;
+    border-color: black;
+
+    width: 60%;
+    border-radius: 2rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+}
+
+#content_input {
+    border-style: solid;
+    border-width: 0.15rem;
+    border-color: black;
+    border-radius: 1rem;
+
+    height: 10rem;
+    width: 60%;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+
+    resize: none;
+}
+
+#log_button {
+    border-style: solid;
+    border-width: 0.15rem;
+    border-color: black;
+    border-radius: 1rem;
+
+    background-color: transparent;
+
+    width: 40%;
+}
 
 @media screen and (max-width: 1000px) {
     .main-title {
@@ -309,7 +378,8 @@ body {
         "main-top-left main-title main-title main-top-right"
         "main-middle-left main-middle-about main-middle-about main-middle-right"
         "main-middle-left main-middle-projects main-middle-projects main-middle-right"
-        "main-bottom-left main-bottom-decoration main-bottom-projects main-bottom-right"
+        "main-bottom-left main-bottom-decoration main-bottom-language main-bottom-right"
+        "main-bottom-left main-bottom-contact main-bottom-contact main-bottom-right"
         "main-footer-left main-footer main-footer main-footer-right";
     }   
 }
